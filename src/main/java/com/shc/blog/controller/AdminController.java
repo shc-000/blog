@@ -1,0 +1,35 @@
+package com.shc.blog.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.shc.blog.bean.Admin;
+import com.shc.blog.service.AdminService;
+
+/**
+ * 管理员控制
+ * @author shc
+ *
+ */
+@Controller
+@RequestMapping("/admin")
+public class AdminController {
+	@Autowired
+	private AdminService adminService;
+	
+	@RequestMapping(value="/reg",method=RequestMethod.POST)
+	public void regAdmin(ModelAndView mav,Admin admin){
+		adminService.save(admin);
+	}
+	
+	@RequestMapping(value="/login",method=RequestMethod.POST)
+	public String loginAdmin(ModelAndView mav,Admin admin){
+		if (admin!=null) {
+			return "articleAdd";
+		}
+		return null;
+	}
+}

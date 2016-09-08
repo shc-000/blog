@@ -36,6 +36,14 @@
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
+	<servlet-mapping>
+     <servlet-name >default </servlet-name >         
+	<url-pattern >*.js</url-pattern>      
+	</servlet-mapping >
+	<servlet-mapping >
+     <servlet-name >default </servlet-name >             
+	<url-pattern >*.css</url-pattern>        
+</servlet-mapping >
 	<!-- 拦截以html为后缀的请求 -->
 	<servlet-mapping>
 		<servlet-name>springMvc</servlet-name>
@@ -45,6 +53,6 @@
 		<session-timeout>10</session-timeout>
 	</session-config>
 	<welcome-file-list>
-		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>admin.jsp</welcome-file>
 	</welcome-file-list>
 </web-app>

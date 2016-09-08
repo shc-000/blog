@@ -40,7 +40,7 @@
 		<!-- 注解方式配置 -->
 		<property name="packagesToScan">
 			<list>
-				<value>com.sgl.model</value>
+				<value>com.shc.blog.bean</value>
 			</list>
 		</property>
 	</bean>
