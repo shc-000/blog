@@ -19,8 +19,10 @@ public class ArticleController {
 	private ArticleService articleService;
 	
 	@RequestMapping(value="/add",method=RequestMethod.POST)
-	public void saveArticle(Article article){
+	public String saveArticle(Article article){
+		System.out.println(article);
 		articleService.save(article);
+		return "articleAdd";
 	}
 	
 }

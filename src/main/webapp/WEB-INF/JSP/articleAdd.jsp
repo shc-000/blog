@@ -15,7 +15,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <script type="text/javascript" src="<%=basePath%>js/zh-cn.js"></script>
 </head>
 <body>
-<form method="post" action="/article/add">
+<form method="post" action="<%=basePath%>article/add">
 	<h3>欢迎</h3>
 	1,xheditor(编辑):<br />
 	<textarea id="elm1" name="articleContent" class="xheditor" rows="12" cols="80" style="width: 80%">
