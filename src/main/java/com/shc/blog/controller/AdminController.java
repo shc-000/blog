@@ -1,12 +1,16 @@
 package com.shc.blog.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.shc.blog.bean.Admin;
+import com.shc.blog.bean.ArticleIntroduct;
 import com.shc.blog.service.AdminService;
 
 /**
@@ -25,9 +29,14 @@ public class AdminController {
 		adminService.save(admin);
 	}
 	
+	@RequestMapping(value="/loginpre",method=RequestMethod.GET)
+	public String loginpre(){
+		return "login/admin";
+	}
+	
 	@RequestMapping(value="/login",method=RequestMethod.POST)
 	public String loginAdmin(ModelAndView mav,Admin admin){
-		if (admin!=null) {
+		if (admin.getUser().equals("shc") && admin.getPwd().equals("shc@lzn1314")) {
 			return "articleAdd";
 		}
 		return null;

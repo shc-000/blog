@@ -12,6 +12,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 @SuppressWarnings("serial")
 @Entity
@@ -25,19 +26,9 @@ public class ArticleIntroduct implements Serializable{
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Integer introductId;
 	
-	@OneToOne  
-	@JoinColumn(name="articleId")  
-	private Article article;
+	@Column(name = "article_id", length = 50)
+	private Integer articleId;
 	
-	
-	public Article getArticle() {
-		return article;
-	}
-
-	public void setArticle(Article article) {
-		this.article = article;
-	}
-
 	@Column(name = "title", length = 50)
 	private String title;
 	
@@ -62,6 +53,14 @@ public class ArticleIntroduct implements Serializable{
 
 	public void setIntroductId(Integer introductId) {
 		this.introductId = introductId;
+	}
+
+	public Integer getArticleId() {
+		return articleId;
+	}
+
+	public void setArticleId(Integer articleId) {
+		this.articleId = articleId;
 	}
 
 	public String getTitle() {
@@ -114,11 +113,12 @@ public class ArticleIntroduct implements Serializable{
 
 	@Override
 	public String toString() {
-		return "ArticleIntroduct [introductId=" + introductId + ", article="
-				+ article + ", title=" + title + ", note=" + note + ", faUser="
-				+ faUser + ", faTime=" + faTime + ", faEye=" + faEye
-				+ ", addLikeCount=" + addLikeCount + "]";
+		return "ArticleIntroduct [introductId=" + introductId + ", articleId="
+				+ articleId + ", title=" + title + ", note=" + note
+				+ ", faUser=" + faUser + ", faTime=" + faTime + ", faEye="
+				+ faEye + ", addLikeCount=" + addLikeCount + "]";
 	}
 
+	
 	
 }

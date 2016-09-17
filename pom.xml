@@ -8,6 +8,17 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	<dependencies>
+	<!-- jstl -->
+	<dependency>
+      <groupId>org.apache.taglibs</groupId>
+      <artifactId>taglibs-standard-spec</artifactId>
+      <version>1.2.1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.taglibs</groupId>
+      <artifactId>taglibs-standard-impl</artifactId>
+      <version>1.2.1</version>
+    </dependency>
 		<!-- log4j -->
 		<dependency>
 			<groupId>log4j</groupId>
@@ -114,17 +125,14 @@
                         <artifactId>tomcat7-maven-plugin</artifactId>
                         <version>2.1</version>
                         <configuration>
-
                             <contextReloadable>true</contextReloadable>
                             <path>/blog</path>
                             <uriEncoding>utf-8</uriEncoding>
                             <charset>utf-8</charset>
-                            <port>8086</port>
-
+                            <port>8080</port>
                             <systemProperties>
                                 <org.apache.tomcat.util.http.ServerCookie.ALLOW_EQUALS_IN_VALUE>true
                                 </org.apache.tomcat.util.http.ServerCookie.ALLOW_EQUALS_IN_VALUE>
-                                <spring.profiles.active>blog</spring.profiles.active>
                                 <file.encoding>UTF-8</file.encoding>
                                 <JAVA_OPTS>-Xms128m -Xmx384m -XX:PermSize=128m -XX:MaxPermSize=128m</JAVA_OPTS>
                                 <!--

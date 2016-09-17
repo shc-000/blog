@@ -1,18 +1,22 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%
+String hpath = request.getContextPath();
+String hbasePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-<link href="css/header.css" rel="stylesheet">
-<script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
+<link href="<%=hbasePath%>css/header.css" rel="stylesheet">
+<script type="text/javascript" src="<%=hbasePath%>js/jquery-1.4.4.min.js"></script>
 </head>
 <body>
 <div class="top">
 			<div class="top_1">
 					<div class="top_logo">
-						<img  src="images/wa.png"/>
+						<img  src="<%=hbasePath%>images/wa.png"/>
 					</div>
 					<div class="top_txt">
 						<font>走别人没走过的路，让别人有路可走</font>

@@ -29,6 +29,8 @@ public class Article implements Serializable{
 	@Column(name = "article_content")
 	private String articleContent;
 	
+	@Column(name = "visit_count")
+	private String visitCount;
 
 	public Integer getArticleId() {
 		return articleId;
@@ -45,12 +47,21 @@ public class Article implements Serializable{
 	public void setArticleContent(String articleContent) {
 		this.articleContent = articleContent;
 	}
+	
+
+	public String getVisitCount() {
+		return visitCount;
+	}
+
+	public void setVisitCount(String visitCount) {
+		this.visitCount = visitCount;
+	}
 
 	@Override
 	public String toString() {
 		return "Article [articleId=" + articleId + ", articleContent="
-				+ articleContent + "]";
+				+ articleContent + ", visitCount=" + visitCount + "]";
 	}
-	
+
 	
 }
