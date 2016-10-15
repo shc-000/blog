@@ -12,6 +12,21 @@ String hbasePath = request.getScheme()+"://"+request.getServerName()+":"+request
 <link rel="shortcut icon" type="image/x-icon" href="<%=hbasePath%>/image/shc.ico" media="screen" />
 <link href="<%=hbasePath%>css/header.css" rel="stylesheet">
 <script type="text/javascript" src="<%=hbasePath%>js/jquery-1.4.4.min.js"></script>
+<script>
+//js部分
+$(document).ready(function(){
+    $(".top_li").click(function(){
+    	 var typeId = $(this).attr("value");
+    	 var url = "<%=hbasePath%>article/showType/"+typeId;
+    	 alert(url);
+    	 alert(typeId);
+    	 $.ajax({
+    		  url: url,
+    		  type: "GET"
+    	 });
+    });
+});
+</script>
 </head>
 <body>
 <div class="top">
@@ -23,14 +38,12 @@ String hbasePath = request.getScheme()+"://"+request.getServerName()+":"+request
 						<font>走别人没走过的路，让别人有路可走</font>
 					</div>
 			</div>
-			<ul class="top_ul">
-				<a href="<%=hbasePath%>article/show" class="top_li" ><li>
-					首页
-				</li></a>
-				<a href="<%=hbasePath%>article/showType/1"><li>Java技术</li></a>
-				<a href="<%=hbasePath%>article/showType/2"><li>数据库</li></a>
-				<a href="<%=hbasePath%>article/showType/3"><li>Linux</li></a>
-				<a href="<%=hbasePath%>article/showType/4"><li>服务器</li></a>
+			<ul class="top_ul"><!-- 将这几个li的链接统一 -->
+				<li class="top_li" value="0">首页</li>
+				<li class="top_li" value="1">Java技术</li>
+				<li class="top_li" value="2">数据库</li>
+				<li class="top_li" value="3">Linux</li>
+				<li class="top_li" value="4">服务器</li>
 			</ul>
 	</div>
 </body>

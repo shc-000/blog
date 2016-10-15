@@ -19,10 +19,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <%@ include file ="header.jsp"%>
 <article>
   <div class="l_box f_l">
-   
     <div class="topnews">
     	${article.articleContent}
-    	
+    </div>
+    <div class="">
+    
     </div>
   </div>
   <div class="r_box f_r">

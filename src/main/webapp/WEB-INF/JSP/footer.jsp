@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <%
 String fpath = request.getContextPath();
-String fbasePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+String fbasePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+fpath+"/";
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -13,7 +13,7 @@ String fbasePath = request.getScheme()+"://"+request.getServerName()+":"+request
 </head>
 <body>
 <footer>
-  <p class="ft-copyright">模范青蛙的博客</p>
+  <p class="ft-copyright">模范青蛙的博客&nbsp;&nbsp;&nbsp;京ICP备16047055号</p>
   <div id="tbox"> <a id="togbook" href="/"></a> <a id="gotop" href="javascript:void(0)"></a> </div>
 </footer>
 </body>

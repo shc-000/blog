@@ -46,6 +46,9 @@ public class ArticleIntroduct implements Serializable{
 	
 	@Column(name = "add_like_count", length = 10)
 	private Integer addLikeCount;
+	
+	@Column(name = "type_id", length = 10)
+	private Integer typeId;
 
 	public Integer getIntroductId() {
 		return introductId;
@@ -111,14 +114,22 @@ public class ArticleIntroduct implements Serializable{
 		this.addLikeCount = addLikeCount;
 	}
 
+	public Integer getTypeId() {
+		return typeId;
+	}
+
+	public void setTypeId(Integer typeId) {
+		this.typeId = typeId;
+	}
+
 	@Override
 	public String toString() {
 		return "ArticleIntroduct [introductId=" + introductId + ", articleId="
 				+ articleId + ", title=" + title + ", note=" + note
 				+ ", faUser=" + faUser + ", faTime=" + faTime + ", faEye="
-				+ faEye + ", addLikeCount=" + addLikeCount + "]";
+				+ faEye + ", addLikeCount=" + addLikeCount + ", typeId="
+				+ typeId + "]";
 	}
 
-	
 	
 }
