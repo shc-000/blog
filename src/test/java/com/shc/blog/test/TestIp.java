@@ -2,11 +2,13 @@ package com.shc.blog.test;
 
 import org.junit.Test;
 
+import com.shc.blog.utils.IPUtils;
+
 public class TestIp {
 
 	@Test
 	public void decodeUnicode() { 
-		String utfStr = "\u5e7f\u5dde\u5e02";
+		String utfStr = "\u8bf7\u9009\u62e9";
 		System.out.println(utfStr);
         final StringBuffer buffer = new StringBuffer(); 
         String charStr = ""; 
@@ -23,7 +25,7 @@ public class TestIp {
 	
 	@Test
     public void convert(){  
-		String utfString = "\u5e7f\u5dde\u5e02";
+		String utfString = "\u8bf7\u9009\u62e9";
         StringBuilder sb = new StringBuilder();  
         int i = -1;  
         int pos = 0;  
@@ -38,4 +40,9 @@ public class TestIp {
           
         System.out.println(sb.toString());  
     }  
+	
+	@Test
+	public void showAddress(){
+		IPUtils.getIpInfo("66.249.64.34");
+	}
 }

@@ -38,11 +38,11 @@ public class ArticleController {
 	 */
 	@RequestMapping(value="/show",method=RequestMethod.GET)
 	public String showArticle(ModelMap model,HttpServletRequest request, HttpServletResponse response) throws IOException{
-		String address = IPUtils.getIpInfo(IPUtils.getIpAddr(request));//获取ip并解析为城市
+		/*String address = IPUtils.getIpInfo(IPUtils.getIpAddr(request));//获取ip并解析为城市
 		String ipAddress = IPUtils.getIpAddr(request);//ip地址
 		Guest guest = new Guest(1,ipAddress,address,new Date(),1);
 		articleService.addGuestRecord(guest);//访客浏览统计
-		List<ArticleIntroduct> articleIntroduct_list = articleService.showArticle();//获取文章列表
+*/		List<ArticleIntroduct> articleIntroduct_list = articleService.showArticle();//获取文章列表
 		model.addAttribute("articleList", articleIntroduct_list); 
 		return "index";
 	}

@@ -14,7 +14,6 @@ String fbasePath = request.getScheme()+"://"+request.getServerName()+":"+request
 <body>
 <footer>
   <p class="ft-copyright">模范青蛙的博客&nbsp;&nbsp;&nbsp;京ICP备16047055号</p>
-  <div id="tbox"> <a id="togbook" href="/"></a> <a id="gotop" href="javascript:void(0)"></a> </div>
 </footer>
 </body>
 </html>
