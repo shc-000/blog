@@ -40,22 +40,6 @@
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
-	<!--  <servlet-mapping>
-     <servlet-name >default </servlet-name >         
-	<url-pattern >*.js</url-pattern>      
-	</servlet-mapping >
-	<servlet-mapping >
-     <servlet-name >default </servlet-name >             
-	<url-pattern >*.css</url-pattern>   
-	</servlet-mapping >
-	<servlet-mapping>
-     <servlet-name >default </servlet-name >             
-	<url-pattern >*.gif</url-pattern>     
-	</servlet-mapping >
-	<servlet-mapping>
-     <servlet-name >default </servlet-name >             
-	<url-pattern >*.jpg</url-pattern>     
-	</servlet-mapping >-->
 	<!-- 拦截以html为后缀的请求 -->
 	<servlet-mapping>
 		<servlet-name>springMvc</servlet-name>
@@ -66,11 +50,11 @@
 	</session-config>
 	<error-page>
 		<error-code>404</error-code>
-		<location>/building.jsp</location>
+		<location>/building.html</location>
 	</error-page>
 	<error-page>
 		<error-code>500</error-code>
-		<location>/error.jsp</location>
+		<location>/error.html</location>
 	</error-page>
 	
 	<welcome-file-list>

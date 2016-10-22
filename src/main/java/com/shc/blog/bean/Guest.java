@@ -33,6 +33,9 @@ public class Guest implements Serializable{
 	
 	@Column(name = "times")
 	private Integer times;
+	
+	@Column(name = "hacker")
+	private int hacker;
 
 	public Integer getGuestId() {
 		return guestId;
@@ -73,16 +76,24 @@ public class Guest implements Serializable{
 	public void setTimes(Integer times) {
 		this.times = times;
 	}
-
 	
+	public int getHacker() {
+		return hacker;
+	}
+
+	public void setHacker(int hacker) {
+		this.hacker = hacker;
+	}
+
 	public Guest(Integer guestId, String guestIp, String address, Date date,
-			Integer times) {
+			Integer times, int hacker) {
 		super();
 		this.guestId = guestId;
 		this.guestIp = guestIp;
 		this.address = address;
 		this.date = date;
 		this.times = times;
+		this.hacker = hacker;
 	}
 
 	public Guest() {
@@ -94,8 +105,7 @@ public class Guest implements Serializable{
 	public String toString() {
 		return "Guest [guestId=" + guestId + ", guestIp=" + guestIp
 				+ ", address=" + address + ", date=" + date + ", times="
-				+ times + "]";
+				+ times + ", hacker=" + hacker + "]";
 	}
-
 	
 }

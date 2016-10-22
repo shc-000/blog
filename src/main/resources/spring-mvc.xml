@@ -35,5 +35,13 @@ http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
         <property name="contentType" value="text/html;charset=UTF-8"/>
         <property name="order" value="1"/>
 	</bean>
-
+	
+	<mvc:interceptors>
+	<!-- 访客浏览文章的拦截器，获取访客信息 -->
+     <mvc:interceptor>
+         <mvc:mapping path="/article/**"/>
+         	<bean class="com.shc.blog.interceptor.GuestIpInterceptor">
+         </bean>
+     </mvc:interceptor>
+	</mvc:interceptors>
 </beans>

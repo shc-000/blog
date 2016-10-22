@@ -10,6 +10,8 @@ import com.shc.blog.bean.Article;
 import com.shc.blog.bean.ArticleIntroduct;
 import com.shc.blog.bean.Guest;
 import com.shc.blog.dao.ArticleDao;
+import com.shc.blog.utils.Page;
+import com.shc.blog.utils.PageTool;
 
 @Service
 @Transactional
@@ -42,19 +44,10 @@ public class ArticleService{
 	}
 	
 	/**
-	 * 根据文章类型获取文章列表
-	 * @return
-	 */
-	public List<ArticleIntroduct> showTypeArticle(Integer typeId){
-		List<ArticleIntroduct> articleIntroduct_list = articleDao.getArticleIntroductType(typeId);
-		return articleIntroduct_list;
-	}
-	
-	/**
 	 * 访客记录
 	 */
-	public void addGuestRecord(Guest guest){
-		articleDao.addGuestRecord(guest);
+	public int addGuestRecord(Guest guest){
+		return articleDao.addGuestRecord(guest);
 	}
 	
 	/**
@@ -63,5 +56,12 @@ public class ArticleService{
 	 */
 	public void addCount(Integer articleId){
 		articleDao.addCount(articleId);
+	}
+	
+	/**
+	 * 分页获取文章列表信息
+	 */
+	public Page<ArticleIntroduct> getPage(PageTool pTool){
+		return articleDao.getPage(pTool);
 	}
 }
