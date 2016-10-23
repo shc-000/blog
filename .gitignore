@@ -6,5 +6,7 @@ bin/
 .classpath
 .project
 .settings/*
-/build/
-/target
+build/
+*.a
+*.DS_Store
+logs/
