@@ -81,7 +81,6 @@ public class ArticleController {
 	 */
 	@RequestMapping(value="/showType/{typeId}",method=RequestMethod.GET)
 	public String showTypeArticle(@PathVariable String typeId,ModelMap model,HttpServletRequest request, HttpServletResponse response){
-		System.out.println(typeId);
 		//如果乱改后缀，让其进入404页面
 		boolean result=typeId.matches("[0-9]+");
 		if (true == result) {//数字格式
