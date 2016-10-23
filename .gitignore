@@ -7,4 +7,3 @@ bin/
 .project
 .settings/*
 /build/
-/target
