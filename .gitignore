@@ -14,5 +14,4 @@ logs/error_log
 logs/warn_log
 logs/
 .gitignore
-target/
 .git/
