@@ -1,17 +1,2 @@
 .DS_Store
-.project
-.settings
-.classpath
-*.class
-bin/
-.settings/*
-build/
-*.txt
 *.DS_Store
-logs/
-putty.log
-logs/error_log
-logs/warn_log
-logs/
-.gitignore
-.git/
