@@ -1,2 +1,11 @@
 .DS_Store
 *.DS_Store
+*.dot
+.DS_Store
+.DS_Store?
+*.class
+bin/
+.classpath
+.project
+.settings/*
+/build/
