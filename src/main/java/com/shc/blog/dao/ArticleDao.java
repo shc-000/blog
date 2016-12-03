@@ -108,11 +108,11 @@ public class ArticleDao {
 	 * @param pTool
 	 * @return
 	 */
-	public long getTotalBookNumber(PageTool pTool) {
+	public int getTotalBookNumber(PageTool pTool) {
 		Session s = sf.getCurrentSession();
 		String hql = "SELECT count(introductId) FROM ArticleIntroduct";
 		Query query = s.createQuery(hql);
-		Long count= (long)query.uniqueResult(); 
+		int count= (int)query.uniqueResult(); 
 		return count; 
 	}
 	

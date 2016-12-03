@@ -14,7 +14,7 @@ public class Page<T> {
 	private int pageSize = 5;//设置一页显示的数据量，Dao文件中也要修改
 	
 	//共有多少条记录
-	private long totalItemNumber;
+	private int totalItemNumber;
 
 	//构造器中需要对 pageNo 进行初始化
 	public Page(int pageNo) {
@@ -58,7 +58,7 @@ public class Page<T> {
 		return totalPageNumber;
 	}
 	
-	public void setTotalItemNumber(long totalItemNumber) {
+	public void setTotalItemNumber(int totalItemNumber) {
 		this.totalItemNumber = totalItemNumber;
 	}
 	
