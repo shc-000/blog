@@ -37,6 +37,12 @@
 			<version>3.1-b09</version>
 			<scope>provided</scope>
 		</dependency>
+		<dependency>
+            <groupId>javax.servlet.jsp</groupId>
+            <artifactId>jsp-api</artifactId>
+            <version>2.2</version>
+            <scope>provided</scope>
+        </dependency>
 		<!-- MySQL驱动 -->
 		<dependency>
 			<groupId>mysql</groupId>
@@ -126,7 +132,8 @@
                         <version>2.1</version>
                         <configuration>
                             <contextReloadable>true</contextReloadable>
-                            <path>/blog</path>
+                            <path>/</path>
+                            <url>http://182.61.15.251:8080/blog</url>
                             <uriEncoding>utf-8</uriEncoding>
                             <charset>utf-8</charset>
                             <port>8080</port>
@@ -135,10 +142,6 @@
                                 </org.apache.tomcat.util.http.ServerCookie.ALLOW_EQUALS_IN_VALUE>
                                 <file.encoding>UTF-8</file.encoding>
                                 <JAVA_OPTS>-Xms128m -Xmx384m -XX:PermSize=128m -XX:MaxPermSize=128m</JAVA_OPTS>
-                                <!--
-                                <JAVA_OPTS>-Xms256m -Xmx512m -XX:MaxPermSize=256m</JAVA_OPTS>
-                                <spring.profiles.active>product</spring.profiles.active>
-                                -->
                             </systemProperties>
                         </configuration>
 
